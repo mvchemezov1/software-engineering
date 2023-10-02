@@ -29,11 +29,10 @@
 ## Лабораторная работа №1
 ### Установить Git на свой компьютер
 ### Результат.
-Рис 1. Заходим на официальный сайт Git.
-![Меню]( https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_1/pic/1.png)
 
-Рис 2. Выбираем установку с помощью winget tool и ждём окончания установки.
-![Меню]( https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_1/pic/2.png)
+Рис 1. Заходим на официальный сайт Git.![Меню]( https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_1/pic/1.png)
+
+Рис 2. Выбираем установку с помощью winget tool и ждём окончания установки.![Меню]( https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_1/pic/2.png)
 
 ## Выводы
 Git можно установить как с помощью стандартного установщика, так и с помощью  winget tool в PowerShell
