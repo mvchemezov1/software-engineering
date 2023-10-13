@@ -5,16 +5,16 @@
 
 | Задание | Лаб_раб | Сам_раб |
 | ------ | ------ | ------ |
-| Задание 1 | - | + |
-| Задание 2 | - | + |
-| Задание 3 | - | + |
-| Задание 4 | - | + |
-| Задание 5 | - | + |
-| Задание 6 | - | + |
-| Задание 7 | - | + |
-| Задание 8 | - | + |
-| Задание 9 | - | - |
-| Задание 10 | - | - |
+| Задание 1 | + | + |
+| Задание 2 | + | + |
+| Задание 3 | + | + |
+| Задание 4 | + | + |
+| Задание 5 | + | + |
+| Задание 6 | + | + |
+| Задание 7 | + | + |
+| Задание 8 | + | + |
+| Задание 9 | + | - |
+| Задание 10 | + | - |
 
 знак "+" - задание выполнено; знак "-" - задание не выполнено;
 
@@ -28,7 +28,7 @@ print(165)
 print('274')
 print(1.09)
 ```
-- Скрины консоли
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab1.png?raw=true)
 - Краткие Выводы
 
 ## Лабораторная работа №2
@@ -38,7 +38,7 @@ print(165-28)
 print(9.8 + 2.7)
 print(3 + 1 + 12.78 + 2.12)
 ```
-- Скрины консоли
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab2.png?raw=true)
 - Краткие Выводы
 
 ## Лабораторная работа №3
@@ -53,7 +53,7 @@ print(a + b)
 world = 'Мир'
 print(f"Привет, {world}!")
 ```
-- Скрины консоли
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab3.png?raw=true)
 - Краткие Выводы
   
 ## Лабораторная работа №4
@@ -68,7 +68,7 @@ print(float(two))
 three = None
 print(str(three))
 ```
-- Скрины консоли
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab4.png?raw=true)
 - Краткие Выводы
 
 ## Лабораторная работа №5
@@ -79,7 +79,7 @@ two = input('two:')
 three = input('three:')
 print(one, two,three)
 ```
-- Скрины консоли
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab5.png?raw=true)
 - Краткие Выводы
 
 ## Лабораторная работа №6
@@ -92,7 +92,7 @@ print('Обычное деление:', a / b)
 print('Целочисленное деление:', a // b)
 print('Нахождение остатка от деления:', a % b)
 ```
-- Скрины консоли
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab6.png?raw=true)
 - Краткие Выводы
 
 ## Лабораторная работа №7
@@ -101,7 +101,7 @@ print('Нахождение остатка от деления:', a % b)
 line = 'Hello'
 print(line * 6)
 ```
-- Скрины консоли
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab7.png?raw=true)
 - Краткие Выводы
 
 ## Лабораторная работа №8
@@ -110,7 +110,7 @@ print(line * 6)
 sentence = 'Hello World'
 print(sentence.count('o'))
 ```
-- Скрины консоли
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab8.png?raw=true)
 - Краткие Выводы
 
 ## Лабораторная работа №9
@@ -118,7 +118,7 @@ print(sentence.count('o'))
 ```Python
 print('Hello\nWorld')
 ```
-- Скрины консоли
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab9.png?raw=true)
 - Краткие Выводы
 
 ## Лабораторная работа №10
@@ -128,7 +128,7 @@ sentence = 'Hello world'
 print(sentence[1])
 print(sentence[:5])
 ```
-- Скрины консоли
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab10.png?raw=true)
 - Краткие Выводы
 
 ## Самостоятельная работа №1
