@@ -33,7 +33,8 @@ else:
     print('Не выполняется')
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab1.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L1_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L1_2.png)
 ### Вывод:
 - Пользователь вводит два значения, которые сохраняются в переменные one и two соответственно.
 - Затем выполняется условие if one >= two, которое сравнивает значения переменных one и two. Если one больше или равно two, то условие считается истинным.
@@ -53,7 +54,9 @@ else:
     print('Переменная больше 10')
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab2.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L2_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L2_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L2_3.png)
 ### Вывод:
 - Строка one = int(input('Введите значение переменной: ')) предлагает пользователю ввести значение переменной и сохраняет его в переменной one, преобразуя в целое число с помощью функции int().
 - Строка if one < 0: проверяет условие: если значение переменной one меньше нуля, выполняется код внутри блока if. В данном случае, если переменная меньше 0, выводится сообщение "Переменная меньше 0".
@@ -75,7 +78,8 @@ else:
     print('Переменной нет в этом массиве')
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab3.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L3_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L3_2.png)
 ### Выводы:
 - Создается список numbers с некоторыми числами.
 - Пользователю предлагается ввести значение переменной с помощью вызова input(), и это значение преобразуется в целое число с помощью int().
@@ -101,7 +105,9 @@ else:
     print(f"Переменная нет в массиве numbers и она равна {value}")
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab4.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L4_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L4_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L4_3.png)
 ### Выводы:
 - Данный код анализирует введенное пользователем значение переменной и проверяет его наличие в списке numbers. Если значение присутствует в списке, то дальше происходит проверка на четность.
 - Если значение является четным (делится на 2 без остатка), то выводится сообщение "Переменная чётная и есть в данном массиве". В противном случае, если значение нечетное, выводится сообщение "Переменная нечётная и есть в данном массиве".
@@ -125,7 +131,7 @@ for i in range(10):
         break
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab5.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L5.png)
 ### Выводы:
 - Сначала код печатает текущее значение i.
 - Если i равно 0, к значению i добавляется 2. Однако, эта операция не влияет на весь цикл, так как в Python цикл for не видит изменения счетчика внутри цикла. Это означает, что даже если вы измените значение i внутри цикла, в следующей итерации i все равно будет увеличено на 1 от предыдущего исходного значение, а не от измененного значения.
@@ -152,7 +158,8 @@ else:
     print(f"Буквы '{value}' нет в указанной строке")
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab6.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L6_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L6_2.png)
 ### Вывод:
 - Этот код Python принимает входные данные от пользователя в форме одного символа (например, буквы), и затем ищет этот символ в заданной строке (в данном случае, строка это "Привет всем изучающим Python!").
 - После того как пользователь вводит значение, код начинает перебирать каждый символ в строке. Если символ, введенный пользователем, совпадает с одним из символов в строке, код находит и выводит индекс этого символа. Индекс - это позиция символа в строке (отсчет начинается с нуля). Поиск прекращается после первого совпадения.
@@ -169,7 +176,7 @@ for i in range(10, -1, -1):
     print(i, value)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab7.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L7.png)
 ### Выводы:
 - Задает начальное значение переменной value равное 100.
 - Выполняет цикл, который итерируется по диапазону начиная с 10 и идет в обратном порядке до 0 (включая его) с шагом -1. Это значит, что переменная цикла i принимает значения от 10 до 0 последовательно в обратном порядке.
@@ -192,7 +199,7 @@ while value < 100:
     print(value)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab8.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L8.png)
 ### Выводы:
 - value = 0 вводит переменную value и задает ей начальное значение 0.
 - while value < 100: устанавливает цикл, который будет выполняться до тех пор, пока value остается меньше 100.
@@ -222,7 +229,7 @@ for i in range(10):
 print(value)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab9.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L9.png)
 ### Выводы:
 - Данный код на языке Python выполняет двойной цикл, где каждый цикл итерируется через диапазон чисел от 0 до 9 (10 чисел всего).
 - Вложенные циклы перебирают все возможные пары (i, j), где i и j изменяются от 0 до 9. Если i не равно j, то j добавляется к переменной value. Если i равно j (что равносильно паре чисел вида (0,0), (1,1), (2,2), и так далее до (9,9)), то цикл продолжает свое выполнение, не увеличивая value.
@@ -246,7 +253,7 @@ else:
     print('В массиве все числа чётные')
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/lab10.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L10_1.png)
 ### Выводы:
 - определена переменная even_array, которая представляет из себя список чисел: 2, 4, 6, 8 и 9.
 - flag объявлена как False. Этот флаг будет использоваться для отслеживания, есть ли в массиве нечетное число.
@@ -270,7 +277,7 @@ for _ in range(2):
 print(num)
 ```
 ### Результат
--![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/ind1.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I1.png)
 ### Выводы:
 - 'num = 1' создается переменная с именем num и присваивается ей значение 1.
 - Затем выполняется цикл for два раза (for _ in range(2):). Прочерк (_) часто используется в Python, когда итерационная переменная цикла for не используется внутри самого цикла.
@@ -292,7 +299,7 @@ for i in range(len(message)-1, -1, -1):
         print(message[i])
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/ind2.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I2.png)
 ### Выводы:
 - 'message = "Hello World"' Здесь объявляется переменная message, которая содержит строку "Hello World".
 - 'for i in range(len(message)-1, -1, -1):' : Здесь устанавливается цикл for. Указанная функция range() создает последовательность чисел от len(message)-1 до 0. len(message)-1 является индексом последнего символа в строке (поскольку индексы в Python начинаются с 0), и -1 является индексом, следующим за первым, что позволяет включить в последовательность и 0. Шаг -1 указывает, что каждая следующая итерация должна происходить в обратном порядке.
@@ -319,9 +326,10 @@ else:
     print("Число находится в диапазоне от 10")
 ```
 ### Результат
-- ![Результат1](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/ind3.1.png?raw=true)
-
-- ![Результат2](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/ind3.2.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I3_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I3_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I3_3.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I3_4.png)
 ### Выводы:
 - Запрашивается ввод числа от пользователя в диапазоне от 0 до 10.
 - Если введенное значение меньше 0 или больше 10, выводится сообщение "Введенное значение не находится в диапазоне от 0 до 10", а затем программа завершается.
@@ -359,7 +367,9 @@ print("Заканчивается ли предложение на 'end':", ends
 # предложения с "The" и окончания на "end"
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/ind4.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I4_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I4_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I4_3.png)
 ### Выводы:
 - Код определяет длину предложения, используя встроенную функцию len(). Эта количество символов в предложении.
 - Приводит все символы предложения к нижнему регистру с помощью метода .lower().
@@ -407,7 +417,7 @@ memory = string
 print(memory)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_2/pic/ind5.png?raw=true)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I5.png)
 ### Выводы:
 - Создание строковых переменных memory и string со значениями ' world' и 'hello' соответственно.
 -  Создание числовой переменной counter со значением 0 и список values, который содержит значения от 0 до 10 с шагом 2.
