@@ -10,11 +10,6 @@
 | Задание 3 | + | + |
 | Задание 4 | + | + |
 | Задание 5 | + | + |
-| Задание 6 |   | + |
-| Задание 7 |   | + |
-| Задание 8 |   | + |
-| Задание 9 |   | + |
-| Задание 10 |   | + |
 
 знак "+" - задание выполнено; знак "-" - задание не выполнено; 
 
@@ -37,12 +32,22 @@
 намного больше возможностей реализации.
 ### Код
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+request = int(input('Введите номер кабинета: '))
+
+dictionary = {
+101: {'key': 1234, 'access': True},
+102: {'key': 1337, 'access': True},
+103: {'key': 8943, 'access': True},
+104: {'key': 5555, 'access': False},
+None: {'key': None, 'access': False},
+}
+
+response = dictionary.get(request)
+if not response:
+    response = dictionary[None]
+key = response.get('key')
+access = response.get('access')
+print(key, access)
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L1_1.png)
