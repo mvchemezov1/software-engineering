@@ -125,7 +125,9 @@ print(my_car._make)
 my_car.drive()
 ```
 ### Результат
+- если print(my_car.__model) активно
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Lab4_1.png)
+- если print(my_car.__model) не активно
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Lab4_2.png)
 ### Выводы:
 - Класс Car имеет два атрибута: _make и __model.
@@ -299,7 +301,9 @@ print(apple._name)
 #print(apple.__tasty) #Выводится ошибка
 ```
 ### Результат
+- если print(apple.__tasty) активно
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Sam4_1.png)
+- если print(apple.__tasty) не активно
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Sam4_2.png)
 ### Выводы:
 - Создание класс Fruit, который содержит атрибуты _name, _color, и __taste, и метод properties(), который возвращает строку, описывающую свойства фрукта.
