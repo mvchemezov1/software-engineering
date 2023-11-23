@@ -29,8 +29,7 @@ class Car:
 my_car = Car("Lada", "Granta")
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L1_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L1_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Lab1.png)
 ### Вывод:
 - Код создает класс "Car" с двумя атрибутами: "make" (марка) и "model" (модель) автомобиля.
 - Конструктор класса "init" принимает два параметра "make" и "model"
@@ -56,9 +55,7 @@ my_car = Car("Lada", "Granta")
 my_car.drive()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L2_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L2_2.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L2_3.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Lab2.png)
 ### Вывод:
 - Создается объект "my_car" класса "Car" с аргументами "Lada" и "Granta".
 - Форматируется строка, чтобы значения атрибутов "self.make" и "self.model" подставились в нужные места.
@@ -98,8 +95,7 @@ my_electric_car.drive()
 my_electric_car.charge()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L3_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L3_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Lab3.png)
 ### Выводы:
 - Класс Car имеет конструктор __init__, который принимает make и model в качестве параметров и инициализирует соответствующие переменные экземпляра.
 - Класс Car имеет метод drive, который выводит сообщение о том, что машина в движении.
@@ -129,9 +125,8 @@ print(my_car._make)
 my_car.drive()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L4_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L4_2.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L4_3.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Lab4_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Lab4_2.png)
 ### Выводы:
 - Класс Car имеет два атрибута: _make и __model.
 - Атрибут _make считается защищенным (по соглашению) и может быть доступен напрямую.
@@ -179,7 +174,7 @@ for shape in shapes:
     print(shape.area())
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L5.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Lab5.png)
 ### Выводы:
 - Определение базового класса 'Shape' с методом 'area'. Метод 'area' будет переопределен в подклассах.
 - Определение подкласса 'Rectangle', наследующего от 'Shape' где реализуется метод-конструктор для инициализации ширины и высоты. Переопределение метода 'area' для вычисления площади прямоугольника.
@@ -209,7 +204,7 @@ print(orange.taste)
 print(banana.name)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Sam1.png)
 ### Выводы:
 - В этом коде создается класс Fruit, который имеет три атрибута: name, color и taste.
 - Затем создаются три объекта класса Fruit - apple, banana и orange - с разными значениями атрибутов.
@@ -240,7 +235,7 @@ print(banana.properties())
 print(orange.properties())
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Sam2.png)
 ### Выводы:
 - Создание класса Fruit, который имеет атрибуты name, color и taste, и метод properties(), который выводит информацию о фрукте на основе его атрибутов.
 - Создание трёх объектов (apple, banana и orange) класса Fruit с различными свойствами (имя, цвет и вкус). Метод properties() вызывается для каждого объекта, чтобы вывести информацию о каждом фрукте.
@@ -276,10 +271,7 @@ pineapple = ExoticFruit("Ананас", "желтый", "сладкий и ки�
 print(pineapple.properties())
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I3_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I3_2.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I3_3.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I3_4.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Sam3.png)
 ### Выводы:
 - Создание класса Fruit который определяет основные характеристики фруктов, такие как имя, цвет и вкус.
 - Создание класса ExoticFruit. Класс ExoticFruit является подклассом Fruit и добавляет новое свойство - популярное место для выращивания фрукта. Метод properties() в каждом классе выводит информацию о фрукте, его цвете, вкусе и в случае экзотических фруктов - о популярном месте для выращивания.
@@ -307,9 +299,8 @@ print(apple._name)
 #print(apple.__tasty) #Выводится ошибка
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I4_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I4_2.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I4_3.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Sam4_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Sam4_2.png)
 ### Выводы:
 - Создание класс Fruit, который содержит атрибуты _name, _color, и __taste, и метод properties(), который возвращает строку, описывающую свойства фрукта.
 - Создается объект apple типа Fruit, представляющий яблоко с атрибутами "Яблоко", "красный" и "сладкий".
@@ -357,7 +348,7 @@ for fruit in fruits:
     print(f'Общий вес {fruit.name} в корзине: {fruit.total()}')
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I5.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Sam5.png)
 ### Выводы:
 - Этот код создает иерархию классов для фруктов, где Fruit является базовым классом, а Apple и Banana наследуются от Fruit.
 - Каждый класс фрукта определяет метод total, который вычисляет общий вес данного вида фруктов в корзине на основе их количества.
