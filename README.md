@@ -84,32 +84,29 @@ icecream.composition()
 Также вас необходимо объяснить Пете почему на скриншоте ниже в консоли выводится ошибка.
 ### Код
 ```python
-class Car:
-    def __init__(self, make, model):
-        self.make = make
-        self.model = model
+class MyClass:
+    def __init__(self, value):
+        self._value = value
 
+    def set_value(self, value):     #установка значения атрибута
+        self._value = value
 
-    def drive(self):
-        print(f"Driving the {self.make} {self.model}")
+    def get_value(self):    #получение значения атрибута
+        return self._value
 
+    def del_value(self):    #удаление атрибута
+        del self._value
 
-my_car = Car("Lada", "Granta")
-my_car.drive()
+    value = property(get_value, set_value, del_value, 'Свойство value')
 
-class ElectricCar(Car):
-    def __init__(self, make, model, battery_capacity):
-        super().__init__(make, model)
-        self.battery_capacity = battery_capacity
-
-
-    def charge(self):
-        print(f"Charging the {self.make} {self.model} with {self.battery_capacity} kWh")
-
-
-my_electric_car = ElectricCar("Nissan", "Ariya", 78)
-my_electric_car.drive()
-my_electric_car.charge()
+obj = MyClass(42)
+print(obj.get_value())
+obj = MyClass(45)
+print(obj.get_value())
+obj = MyClass(100)
+print(obj.get_value())
+obj.del_value()
+print(obj.get_value())
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Lab3.png)
@@ -126,20 +123,24 @@ my_electric_car.charge()
 - Вам  прекрасно  известно,  что  кошки  и  собаки  являются млекопитающими, но компьютер этого не понимает, поэтому вам нужно написать три класса: Кошки, Собаки, Млекопитающие. И при помощи “наследования” объяснить  компьютеру  что  кошки  и  собаки  – это млекопитающие. Также добавьте какой-нибудь свой атрибут для кошек и собак, чтобы показать, что они чем-то отличаются друг от друга.
 ### Код
 ```python
-class Car:
-    def __init__(self, make, model):
-        self._make = make
-        self.__model = model
+class Mammal:
+    className = 'Mammal'
 
 
-    def drive(self):
-        print(f"Driving the {self._make} {self.__model}")
+class Dog(Mammal):
+    species = 'canine'
+    sounds = 'wow'
 
 
-my_car = Car("Lada", "Granta")
-print(my_car._make)
-#print(my_car.__model)
-my_car.drive()
+class Cat(Mammal):
+    species = 'feline'
+    sounds = 'meow'
+
+
+dog = Dog()
+print(f"Dog is {dog.className}, but they say {dog.sounds}")
+cat = Cat()
+print(f"Dog is {cat.className}, but they say {cat.sounds}")
 ```
 ### Результат
 - если print(my_car.__model) активно
@@ -159,39 +160,28 @@ my_car.drive()
 Заметьте, что  для  решения  поставленной  задачи  мы  использовали декоратор  @staticmethod,  поскольку  нам  не  нужны  обязательные параметры-ссылки вроде self.
 ### Код
 ```python
-class Shape:
-    def area(self):
-        pass
+class Russian:
+
+    @staticmethod
+    def greeting():
+        print("Привет")
 
 
-class Rectangle(Shape):
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
+class English:
+
+    @staticmethod
+    def greeting():
+        print("Hello")
 
 
-    def area(self):
-        return self.width * self.height
+def greet(language):
+    language.greeting()
 
 
-class Circle(Shape):
-    def __init__(self, radius):
-        self.radius = radius
-
-    def area(self):
-        return 3.14 * self.radius * self.radius
-
-
-# Создание объектов
-rectangle = Rectangle(5, 4)
-circle = Circle(3)
-
-# Создание массива с фигурами
-shapes = [rectangle, circle]
-
-# Вывод площадей фигур
-for shape in shapes:
-    print(shape.area())
+michael = Russian()
+greet(michael)
+john = English()
+greet(john)
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Lab5.png)
