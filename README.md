@@ -275,34 +275,32 @@ class Tomato:
             self._state = self.states['green']
         elif self._state == self.states['green']:
             self._state = self.states['red']
-        print(f"Помидор номер {self.index} созревает")
+        #print(f"Помидор номер {self._index} созревает до стадии {self._state}")
 
     def is_ripe(self):
         # Метод is_ripe() проверяет, что томат созрел
         return self._state == self.states['red']
 
-#1)
+#1
 class TomatoBush:
-#2)
+#2
     def __init__(self, num_tomatoes):
         # Определяем класс TomatoBush с динамическим свойством tomatoes - это список объектов класса Tomato
         self.tomatoes = [Tomato(index) for index in range(1, num_tomatoes + 1)]  # создаем список томатов
-
-#3)
+#3
     def grow_all(self):
         # Метод для перевода всех объектов из списка томатов на следующий этап созревания
         for tomato in self.tomatoes:
             tomato.grow()
-
-#4)
+        print(f"все томаты перешли на этап {tomato._state}") #ыводится если последний томат перешёл на следующий этап
+#4
     def all_are_ripe(self):
         # Метод, который возвращает True, если все томаты из списка стали спелыми
         for tomato in self.tomatoes:
             if not tomato.is_ripe():
                 return False
         return True
-
-#5)
+#5
     def give_away_all(self):
         # Метод, который чистит список томатов после сбора урожая
         self.tomatoes = []
@@ -344,7 +342,7 @@ class Tomato:
             self._state = self.states['green']
         elif self._state == self.states['green']:
             self._state = self.states['red']
-        print(f"Помидор номер {self.index} созревает")
+        #print(f"Помидор номер {self._index} созревает до стадии {self._state}")
 
     def is_ripe(self):
         # Метод is_ripe() проверяет, что томат созрел
@@ -359,6 +357,7 @@ class TomatoBush:
         # Метод для перевода всех объектов из списка томатов на следующий этап созревания
         for tomato in self.tomatoes:
             tomato.grow()
+        print(f"все томаты перешли на этап {tomato._state}") #ыводится если последний томат перешёл на следующий этап
 
     def all_are_ripe(self):
         # Метод, который возвращает True, если все томаты из списка стали спелыми
@@ -371,29 +370,29 @@ class TomatoBush:
         # Метод, который чистит список томатов после сбора урожая
         self.tomatoes = []
 
-
-#1)
+#1
 class Gardener:
-#2)
+#2
     def __init__(self, name, plant):
         # Динамические свойства:
         # - name (передается параметром, является публичным)
         # - _plant (принимает объект класса TomatoBush)
         self.name = name  # имя садовника
         self._plant = plant  # растение, за которым ухаживает садовник
-#3)
+#3
     def work(self):
         # Метод work() заставляет садовника работать, что позволяет растению становиться более зрелым
         self._plant.grow_all()  # увеличиваем созревание всех помидоров на кусте
-#4)
+        print(f"садовник {self.name} хорошо поработал.")
+#4
     def harvest(self):
         # Метод harvest() проверяет, все ли плоды созрели. Если все, то садовник собирает урожай. Если нет, то метод печатает предупреждение
-        if self._plant.all_ripe():
+        if self._plant.all_are_ripe():
             print(f"{self.name} собирает урожай!")
-            self._plant.clear_all()  # сбрасываем состояние всех помидоров
+            self._plant.give_away_all()  # сбрасываем состояние всех помидоров
         else:
             print("Предупреждение: Не все помидоры созрели, нельзя собирать урожай!")
-#5)
+#5
     @staticmethod
     def knowledge_base():
         # Статический метод knowledge_base() выводит в консоль справку по садоводству
@@ -438,7 +437,7 @@ class Tomato:
             self._state = self.states['green']
         elif self._state == self.states['green']:
             self._state = self.states['red']
-        print(f"Помидор номер {self.index} созревает до {self._index}")
+        #print(f"Помидор номер {self._index} созревает до стадии {self._state}")
 
     def is_ripe(self):
         # Метод is_ripe() проверяет, что томат созрел
@@ -453,6 +452,7 @@ class TomatoBush:
         # Метод для перевода всех объектов из списка томатов на следующий этап созревания
         for tomato in self.tomatoes:
             tomato.grow()
+        print(f"все томаты перешли на этап {tomato._state}") #ыводится если последний томат перешёл на следующий этап
 
     def all_are_ripe(self):
         # Метод, который возвращает True, если все томаты из списка стали спелыми
@@ -477,13 +477,13 @@ class Gardener:
     def work(self):
         # Метод work() заставляет садовника работать, что позволяет растению становиться более зрелым
         self._plant.grow_all()  # увеличиваем созревание всех помидоров на кусте
-        print(f"садовник {gardener.name} хорошо поработал.")
+        print(f"садовник {self.name} хорошо поработал.")
 
     def harvest(self):
         # Метод harvest() проверяет, все ли плоды созрели. Если все, то садовник собирает урожай. Если нет, то метод печатает предупреждение
-        if self._plant.all_ripe():
+        if self._plant.all_are_ripe():
             print(f"{self.name} собирает урожай!")
-            self._plant.clear_all()  # сбрасываем состояние всех помидоров
+            self._plant.give_away_all()  # сбрасываем состояние всех помидоров
         else:
             print("Предупреждение: Не все помидоры созрели, нельзя собирать урожай!")
 
@@ -495,22 +495,28 @@ class Gardener:
 
 
 #1)
+print('#1')
 Gardener.knowledge_base()   #Вызов справки по садоводству
 
 #2)
-tomat = TomatoBush(17) #Вызов объектов класса TomatoBush
+print('#2')
+tomat = TomatoBush(6) #Вызов объектов класса TomatoBush
 gardener = Gardener('Михаил', tomat)    #Вызов объектов класса Gardener
 
 #3)
-gardener.work #созревание помидоров, этап цветения
+print('#3')
+gardener.work() #созревание помидоров, этап цветения
 
 #4)
-gardener.harvest #попытка сбора несозревшего урожая, ,будет выведено сообщение "Предупреждение: Не все помидоры созрели, нельзя собирать урожай!"
+print('#4')
+gardener.harvest() #попытка сбора несозревшего урожая, ,будет выведено сообщение "Предупреждение: Не все помидоры созрели, нельзя собирать урожай!"
 
 #5)
-gardener.work    #этап зеленые помидоры
-gardener.work    #красные помидоры
-gardener.harvest #сбор урожая
+print('#5')
+gardener.work() #этап зеленые помидоры
+gardener.work() #красные помидоры
+gardener.harvest() #сбор урожая
+
 
 ```
 ### Результат
