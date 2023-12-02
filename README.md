@@ -204,22 +204,35 @@ greet(john)
 5) Создайте метод is_ripe(), который будет проверять, что томат созрел
 ### Код
 ```python
-class Fruit:
-    def __init__(self, name, color, taste):
-        self.name = name
-        self.color = color
-        self.taste = taste
+#1)
+class Tomato:
+    # Создаем статическое свойство states, которое будет содержать все стадии созревания помидора
+#2)
+    states = {
+        'none': 'отсутствует',
+        'blossom': 'цветение',
+        'green': 'зелёный',
+        'red': 'красный'
+    }
 
-
-# Создаем объекты
-apple = Fruit("Яблоко", "красный", "сладкий")
-banana = Fruit("Банан", "желтый", "сладкий и ароматный")
-orange = Fruit("Апельсин", "оранжевый", "кисло-сладкий")
-
-# Выводим некоторые свойства объектов
-print(apple.color)
-print(orange.taste)
-print(banana.name)
+#3)
+    def __init__(self, index):
+        # Создаем два динамических свойства: _index (передается параметром) и _state(принимает первое значение из словаря states)
+        self._index = index  # _index - это индекс помидора
+        self._state = self.states['none']  # _state - это стадия созревания помидора, изначально он отсутствует
+#4)
+    def grow(self):
+        # Метод grow() переводит томат на следующую стадию созревания
+        if self._state == self.states['none']:
+            self._state = self.states['blossom']
+        elif self._state == self.states['blossom']:
+            self._state = self.states['green']
+        elif self._state == self.states['green']:
+            self._state = self.states['red']
+#5)
+    def is_ripe(self):
+        # Метод is_ripe() проверяет, что томат созрел
+        return self._state == self.states['red']
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Sam1.png)
@@ -229,32 +242,70 @@ print(banana.name)
 - Выводятся некоторые свойства этих объектов с помощью команды print.
 
 ## Самостоятельная работа №2
-- 1)Создайте класс Gardener
-2) Создайте метод __init__(), внутри которого будут определены два динамических свойства: name (передается параметром, является публичным) и _plant (принимает объект класса TomatoBush). После написания этого блока кода в комментарии к нему укажите какими являются эти два свойства
-3) Создайте метод work(), который заставляет садовника работать, что позволяет растению становиться более зрелым
-4) Создайте метод harvest(), который проверяет, все ли плоды созрели. Если все, то садовник собирает урожай. Если нет, то метод печатает предупреждение
-5) Создайте статический метод knowledge_base(), который выведет в консоль справку по садоводству
+- Класс TomatoBush:
+1) Создайте класс TomatoBush
+2) Определите метод __init__(), который будет принимать в качестве 
+параметра количество томатов и на его основе будет создавать 
+список объектов класса Tomato. Данный список будет храниться 
+внутри динамического свойства tomatoes
+3) Создайте метод grow_all(), который будет переводить все объекты из списка томатов на следующий этап созревания
+4) Создайте метод all_are_ripe(), который будет возвращать True, если все томаты из списка стали спелыми.
+5) Создайте метод give_away_all(), который будет чистить список томатов после сбора урожая
 ### Код
 ```python
-class Fruit:
-    def __init__(self, name, color, taste):
-        self.name = name
-        self.color = color
-        self.taste = taste
+class Tomato:
+    # Создаем статическое свойство states, которое будет содержать все стадии созревания помидора
+    states = {
+        'none': 'отсутствует',
+        'blossom': 'цветение',
+        'green': 'зелёный',
+        'red': 'красный'
+    }
 
-    def properties(self):
-        return f"{self.name} имеет {self.color} цвет и вкус {self.taste}"
+    def __init__(self, index):
+        # Создаем два динамических свойства: _index (передается параметром) и _state(принимает первое значение из словаря states)
+        self._index = index  # _index - это индекс помидора
+        self._state = self.states['none']  # _state - это стадия созревания помидора, изначально он отсутствует
 
+    def grow(self):
+        # Метод grow() переводит томат на следующую стадию созревания
+        if self._state == self.states['none']:
+            self._state = self.states['blossom']
+        elif self._state == self.states['blossom']:
+            self._state = self.states['green']
+        elif self._state == self.states['green']:
+            self._state = self.states['red']
+        print(f"Помидор номер {self.index} созревает")
 
-# Создаем объекты
-apple = Fruit("Яблоко", "красный", "сладкий")
-banana = Fruit("Банан", "желтый", "сладкий и ароматный")
-orange = Fruit("Апельсин", "оранжевый", "кисло-сладкий")
+    def is_ripe(self):
+        # Метод is_ripe() проверяет, что томат созрел
+        return self._state == self.states['red']
 
-# Используем методы объектов
-print(apple.properties())
-print(banana.properties())
-print(orange.properties())
+#1)
+class TomatoBush:
+#2)
+    def __init__(self, num_tomatoes):
+        # Определяем класс TomatoBush с динамическим свойством tomatoes - это список объектов класса Tomato
+        self.tomatoes = [Tomato(index) for index in range(1, num_tomatoes + 1)]  # создаем список томатов
+
+#3)
+    def grow_all(self):
+        # Метод для перевода всех объектов из списка томатов на следующий этап созревания
+        for tomato in self.tomatoes:
+            tomato.grow()
+
+#4)
+    def all_are_ripe(self):
+        # Метод, который возвращает True, если все томаты из списка стали спелыми
+        for tomato in self.tomatoes:
+            if not tomato.is_ripe():
+                return False
+        return True
+
+#5)
+    def give_away_all(self):
+        # Метод, который чистит список томатов после сбора урожая
+        self.tomatoes = []
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Sam2.png)
@@ -263,39 +314,91 @@ print(orange.properties())
 - Создание трёх объектов (apple, banana и orange) класса Fruit с различными свойствами (имя, цвет и вкус). Метод properties() вызывается для каждого объекта, чтобы вывести информацию о каждом фрукте.
   
 ## Самостоятельная работа №3
-- Тесты:
-1) Вызовите справку по садоводству
-2) Создайте объекты классов TomatoBush и Gardener
-3) Используя объект класса Gardener, поухаживайте за кустом с помидорами
-4) Попробуйте собрать урожай, когда томаты еще не дозрели. Продолжайте ухаживать за ними
-5) Соберите урожай
+- Класс Gardener
+1)Создайте класс Gardener
+2) Создайте метод __init__(), внутри которого будут определены два динамических свойства: name (передается параметром, является публичным) и _plant (принимает объект класса TomatoBush). После написания этого блока кода в комментарии к нему укажите какими являются эти два свойства
+3) Создайте метод work(), который заставляет садовника работать, что позволяет растению становиться более зрелым
+4) Создайте метод harvest(), который проверяет, все ли плоды созрели. Если все, то садовник собирает урожай. Если нет, то метод печатает предупреждение
+5) Создайте статический метод knowledge_base(), который выведет в консоль справку по садоводству
 ### Код
 ```python
-class Fruit:
-    def __init__(self, name, color, taste):
-        self.name = name
-        self.color = color
-        self.taste = taste
+class Tomato:
+    # Создаем статическое свойство states, которое будет содержать все стадии созревания помидора
+    states = {
+        'none': 'отсутствует',
+        'blossom': 'цветение',
+        'green': 'зелёный',
+        'red': 'красный'
+    }
 
-    def properties(self):
-        return f"{self.name} имеет {self.color} цвет и вкус {self.taste}"
+    def __init__(self, index):
+        # Создаем два динамических свойства: _index (передается параметром) и _state(принимает первое значение из словаря states)
+        self._index = index  # _index - это индекс помидора
+        self._state = self.states['none']  # _state - это стадия созревания помидора, изначально он отсутствует
+
+    def grow(self):
+        # Метод grow() переводит томат на следующую стадию созревания
+        if self._state == self.states['none']:
+            self._state = self.states['blossom']
+        elif self._state == self.states['blossom']:
+            self._state = self.states['green']
+        elif self._state == self.states['green']:
+            self._state = self.states['red']
+        print(f"Помидор номер {self.index} созревает")
+
+    def is_ripe(self):
+        # Метод is_ripe() проверяет, что томат созрел
+        return self._state == self.states['red']
+
+class TomatoBush:
+    def __init__(self, num_tomatoes):
+        # Определяем класс TomatoBush с динамическим свойством tomatoes - это список объектов класса Tomato
+        self.tomatoes = [Tomato(index) for index in range(1, num_tomatoes + 1)]  # создаем список томатов
+
+    def grow_all(self):
+        # Метод для перевода всех объектов из списка томатов на следующий этап созревания
+        for tomato in self.tomatoes:
+            tomato.grow()
+
+    def all_are_ripe(self):
+        # Метод, который возвращает True, если все томаты из списка стали спелыми
+        for tomato in self.tomatoes:
+            if not tomato.is_ripe():
+                return False
+        return True
+
+    def give_away_all(self):
+        # Метод, который чистит список томатов после сбора урожая
+        self.tomatoes = []
 
 
-# Создаем объекты
-apple = Fruit("Яблоко", "красный", "сладкий")
-banana = Fruit("Банан", "желтый", "сладкий и ароматный")
-orange = Fruit("Апельсин", "оранжевый", "кисло-сладкий")
-
-class ExoticFruit(Fruit):
-    def __init__(self, name, color, taste, origin):
-        super().__init__(name, color, taste)
-        self.origin = origin
-
-    def properties(self):
-        return f"{self.name} имеет {self.color} цвет и вкус {self.taste}. Популярное место для выращивания {self.origin}"
-
-pineapple = ExoticFruit("Ананас", "желтый", "сладкий и кислый", "Гавайи")
-print(pineapple.properties())
+#1)
+class Gardener:
+#2)
+    def __init__(self, name, plant):
+        # Динамические свойства:
+        # - name (передается параметром, является публичным)
+        # - _plant (принимает объект класса TomatoBush)
+        self.name = name  # имя садовника
+        self._plant = plant  # растение, за которым ухаживает садовник
+#3)
+    def work(self):
+        # Метод work() заставляет садовника работать, что позволяет растению становиться более зрелым
+        self._plant.grow_all()  # увеличиваем созревание всех помидоров на кусте
+#4)
+    def harvest(self):
+        # Метод harvest() проверяет, все ли плоды созрели. Если все, то садовник собирает урожай. Если нет, то метод печатает предупреждение
+        if self._plant.all_ripe():
+            print(f"{self.name} собирает урожай!")
+            self._plant.clear_all()  # сбрасываем состояние всех помидоров
+        else:
+            print("Предупреждение: Не все помидоры созрели, нельзя собирать урожай!")
+#5)
+    @staticmethod
+    def knowledge_base():
+        # Статический метод knowledge_base() выводит в консоль справку по садоводству
+        print("Садоводство - это искусство выращивания растений в саду или огороде с целью получения урожая.")
+        print("Садовод должен ухаживать за растениями, обрабатывать почву, поливать и удобрять их для успешного выращивания.")
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Sam3.png)
@@ -305,25 +408,110 @@ print(pineapple.properties())
 - Пример использования этих классов демонстрируется созданием экземпляра pineapple (ананаса) и вызовом метода properties(), чтобы вывести информацию об ананасе, включая его свойства и популярное место для выращивания.
   
 ## Самостоятельная работа №4
-- Самостоятельно реализуйте инкапсуляцию, продолжая работать с ранее созданным классом. Она должна отличаться, от того, что указана в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
+- Тесты:
+1) Вызовите справку по садоводству
+2) Создайте объекты классов TomatoBush и Gardener
+3) Используя объект класса Gardener, поухаживайте за кустом с помидорами
+4) Попробуйте собрать урожай, когда томаты еще не дозрели. Продолжайте ухаживать за ними
+5) Соберите урожай
 ### Код
 ```python
-class Fruit:
-    def __init__(self, name, color, taste):
-        self._name = name
-        self._color = color
-        self.__taste = taste
+class Tomato:
+    # Создаем статическое свойство states, которое будет содержать все стадии созревания помидора
+    states = {
+        'none': 'отсутствует',
+        'blossom': 'цветение',
+        'green': 'зелёный',
+        'red': 'красный'
+    }
 
-    def properties(self):
-        return f"{self._name} имеет {self._color} цвет и вкус {self.__taste}"
+    def __init__(self, index):
+        # Создаем два динамических свойства: _index (передается параметром) и _state(принимает первое значение из словаря states)
+        self._index = index  # _index - это индекс помидора
+        self._state = self.states['none']  # _state - это стадия созревания помидора, изначально он отсутствует
+
+    def grow(self):
+        # Метод grow() переводит томат на следующую стадию созревания
+        if self._state == self.states['none']:
+            self._state = self.states['blossom']
+        elif self._state == self.states['blossom']:
+            self._state = self.states['green']
+        elif self._state == self.states['green']:
+            self._state = self.states['red']
+        print(f"Помидор номер {self.index} созревает до {self._index}")
+
+    def is_ripe(self):
+        # Метод is_ripe() проверяет, что томат созрел
+        return self._state == self.states['red']
+
+class TomatoBush:
+    def __init__(self, num_tomatoes):
+        # Определяем класс TomatoBush с динамическим свойством tomatoes - это список объектов класса Tomato
+        self.tomatoes = [Tomato(index) for index in range(1, num_tomatoes + 1)]  # создаем список томатов
+
+    def grow_all(self):
+        # Метод для перевода всех объектов из списка томатов на следующий этап созревания
+        for tomato in self.tomatoes:
+            tomato.grow()
+
+    def all_are_ripe(self):
+        # Метод, который возвращает True, если все томаты из списка стали спелыми
+        for tomato in self.tomatoes:
+            if not tomato.is_ripe():
+                return False
+        return True
+
+    def give_away_all(self):
+        # Метод, который чистит список томатов после сбора урожая
+        self.tomatoes = []
 
 
-# Создаем объекты
-apple = Fruit("Яблоко", "красный", "сладкий")
+class Gardener:
+    def __init__(self, name, plant):
+        # Динамические свойства:
+        # - name (передается параметром, является публичным)
+        # - _plant (принимает объект класса TomatoBush)
+        self.name = name  # имя садовника
+        self._plant = plant  # растение, за которым ухаживает садовник
 
-# Вызов атрибутов объекта
-print(apple._name)
-#print(apple.__tasty) #Выводится ошибка
+    def work(self):
+        # Метод work() заставляет садовника работать, что позволяет растению становиться более зрелым
+        self._plant.grow_all()  # увеличиваем созревание всех помидоров на кусте
+        print(f"садовник {gardener.name} хорошо поработал.")
+
+    def harvest(self):
+        # Метод harvest() проверяет, все ли плоды созрели. Если все, то садовник собирает урожай. Если нет, то метод печатает предупреждение
+        if self._plant.all_ripe():
+            print(f"{self.name} собирает урожай!")
+            self._plant.clear_all()  # сбрасываем состояние всех помидоров
+        else:
+            print("Предупреждение: Не все помидоры созрели, нельзя собирать урожай!")
+
+    @staticmethod
+    def knowledge_base():
+        # Статический метод knowledge_base() выводит в консоль справку по садоводству
+        print("Садоводство - это искусство выращивания растений в саду или огороде с целью получения урожая.")
+        print("Садовод должен ухаживать за растениями, обрабатывать почву, поливать и удобрять их для успешного выращивания.")
+
+
+#1)
+Gardener.knowledge_base()   #Вызов справки по садоводству
+
+#2)
+tomat = TomatoBush(17) #Вызов объектов класса TomatoBush
+gardener = Gardener('Михаил', tomat)    #Вызов объектов класса Gardener
+
+#3)
+gardener.work #созревание помидоров, этап цветения
+
+#4)
+gardener.harvest #попытка сбора несозревшего урожая, ,будет выведено сообщение "Предупреждение: Не все помидоры созрели, нельзя собирать урожай!"
+
+#5)
+gardener.work    #этап зеленые помидоры
+gardener.work    #красные помидоры
+gardener.harvest #сбор урожая
+
 ```
 ### Результат
 - если print(apple.__tasty) активно
@@ -335,53 +523,6 @@ print(apple._name)
 - Создается объект apple типа Fruit, представляющий яблоко с атрибутами "Яблоко", "красный" и "сладкий".
 - print(apple._name) выводит значение атрибута _name объекта apple, что будет "Яблоко".
 - Однако, при попытке вывести print(apple.__tasty) возникнет ошибка, так как атрибут __taste объявлен как закрытый (private) с использованием двойного подчеркивания перед именем (__taste). Доступ к закрытым атрибутам напрямую извне класса невозможен.
-  
-## Самостоятельная работа №5
-- Самостоятельно реализуйте полиморфизм. Он должен отличаться, от того, что указан в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
-### Код
-```python
-class Fruit:
-    def __init__(self, name, quantity):
-        self.name = name
-        self.quantity = quantity
-
-    def total(self):
-        pass
-
-
-class Apple(Fruit):
-    def __init__(self, quantity):
-        super().__init__('Apple', quantity)
-
-    def total(self):
-        return self.quantity * 242  # Предположим, что каждое яблоко весит 242 грамма
-
-
-class Banana(Fruit):
-    def __init__(self, quantity):
-        super().__init__('Banana', quantity)
-
-    def total(self):
-        return self.quantity * 150  # Предположим, что каждый банан весит 150 единицы
-
-
-# Создание объектов
-apple = Apple(5)
-banana = Banana(7)
-
-# Создание массива с фруктами
-fruits = [apple, banana]
-
-# Вывод общего веса фруктов
-for fruit in fruits:
-    print(f'Общий вес {fruit.name} в корзине: {fruit.total()}')
-```
-### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_8/pic/Sam5.png)
-### Выводы:
-- Этот код создает иерархию классов для фруктов, где Fruit является базовым классом, а Apple и Banana наследуются от Fruit.
-- Каждый класс фрукта определяет метод total, который вычисляет общий вес данного вида фруктов в корзине на основе их количества.
-- Создаются объекты Apple и Banana, затем они помещаются в список fruits, и в конце выводится общий вес каждого вида фруктов.
 
 ## Общие выводы по теме
 - Классы позволяют создавать новые типы данных, описывая их состояние (атрибуты) и поведение (методы). Классы являются шаблонами, на основе которых можно создавать экземпляры (объекты).
