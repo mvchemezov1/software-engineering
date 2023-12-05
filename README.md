@@ -27,10 +27,7 @@ for item in numbers:
 ```
 
 ### Результат
-- Без декоратора
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Lab1_1.png)
-- С декоратором
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Lab1_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_11/pic/Lab1.png)
 ### Вывод:
 - Создается список numbers и заполняется значениями [0, 1, 2, 3, 4, 5].
 - Запускается цикл for, который будет последовательно проходить по каждому элементу списка.
@@ -63,7 +60,7 @@ if __name__ == '__main__':
         print(i)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Lab2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_11/pic/Lab2.png)
 ### Вывод:
 - Определяется класс CountDown.
 - Внутри класса определяется метод __init__, который принимает аргумент start. В этом методе устанавливается атрибут count равным start + 1.
@@ -89,7 +86,7 @@ for i in a:
     print(i)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Lab3.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_11/pic/Lab3.png)
 ### Выводы:
 - Создается переменная a, в которую записывается результат выражения [i ** 2 for i in range(1, 5)]. Это выражение использует генератор списка для создания списка квадратов чисел от 1 до 4. Таким образом, в a будет сохранен список [1, 4, 9, 16].
 - Выводится строка "a -" с последующим выводом значения переменной a. В результате будет выведено: "a - [1, 4, 9, 16]".
@@ -115,7 +112,7 @@ for i in b:
     print(i)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Lab4.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_11/pic/Lab4.png)
 ### Выводы:
 - Создается переменная b, в которую записывается результат выражения (i ** 2 for i in range(1, 5)). Это выражение использует генератор списка для создания генератора объектов с квадратами чисел от 1 до 4.
 - Выводится переменная b. Поскольку b - это генератор, вывод его напрямую не отобразит элементы генератора, а лишь выведет информацию о самом объекте-генераторе.
@@ -141,7 +138,7 @@ if __name__ == '__main__':
         print(i)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Lab5.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_11/pic/Lab5.png)
 ### Выводы:
 - Объявляется функция countdown, которая принимает аргумент count.
 - Внутри функции запускается бесконечный цикл while, который продолжается до тех пор, пока count больше или равен 0.
@@ -176,8 +173,8 @@ for i in fib_sequence:
     print(i)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Sam1_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Sam1_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_11/pic/Sam1_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_11/pic/Sam1_2.png)
 ### Выводы:
 - Объявляется функция fib(n), которая принимает аргумент n - количество чисел в последовательности Фибоначчи, которые нужно сгенерировать.
 - Внутри функции создаются две переменные a и b, которые инициализируются значением 1. Они представляют первые два числа последовательности Фибоначчи.
@@ -206,7 +203,8 @@ for i in fib_sequence:
     print(i)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Sam2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_11/pic/Sam2_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_11/pic/Sam2_2.png)
 ### Выводы:
 - Создается функция fib(n), которая принимает аргумент n - количество чисел в последовательности Фибоначчи, которые нужно сгенерировать.
 - Внутри функции открывается файл "fib.txt" в режиме записи с помощью оператора with open("fib.txt", "w") as file:. Это позволяет открыть файл "fib.txt" для записи и автоматически закрыть его после завершения блока кода.
