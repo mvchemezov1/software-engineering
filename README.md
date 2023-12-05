@@ -65,7 +65,10 @@ if __name__ == '__main__':
 ```
 
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_9/pic/Lab1.png)
+- Без декоратора
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Lab1_1.png)
+- С декоратором
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Lab1_2.png)
 ### Вывод:
 - В данном коде объявлен класс "Michael", который имеет атрибут "slots" со значением ['name']. Атрибут "slots" используется для определения фиксированного множества атрибутов для экземпляра класса. В данном случае, экземпляры класса "Michael" могут иметь только атрибут "name".
 - В конструкторе класса "init" определен метод инициализации экземпляра. Он принимает аргумент "name" и проверяет, является ли значение "name" равным строке 'Михаил'. Если условие выполняется, то атрибут "name" экземпляра класса устанавливается как "Да, я Михаил". В противном случае, атрибут "name" устанавливается как "Да, я {name}".
@@ -106,7 +109,7 @@ if __name__ == '__main__':
     personal_info('Петр', 138, 15, 48, 2)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_9/pic/Lab2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Lab2.png)
 ### Вывод:
 - Создается класс "Icecream". Внутри класса определен метод "init", который является конструктором инициализации экземпляра. Он принимает один аргумент "ingredient" по умолчанию равный None. Внутри конструктора проверяется, является ли "ingredient" строкой. Если "ingredient" является строкой, то атрибут "self.ingredient" устанавливается равным переданной строке. В противном случае, "self.ingredient" устанавливается равным None.
 - В классе также определен метод "composition", который выводит состав мороженого, основываясь на атрибуте "ingredient". Если "ingredient" не является None, то выводится сообщение о мороженом с указанным ингредиентом. Иначе выводится сообщение о обычном мороженом.
@@ -143,7 +146,7 @@ if __name__ == '__main__':
     data([1, 15, 'Hello', 'i', 'try', 'to', 'crash', 'your', 'site', 38, 45])
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_9/pic/Lab3.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Lab3.png)
 ### Выводы:
 - Создается класс "MyClass", который содержит методы init, set_value, get_value и del_value, а также свойство "value".
 - Метод init принимает один аргумент "value" и инициализирует атрибут класса "_value" значением "value".
@@ -179,7 +182,7 @@ if __name__ == '__main__':
     check_name(name)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_9/pic/Lab4.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Lab4.png)
 ### Выводы:
 - Определяется класс "Mammal" с атрибутом "className", установленным в значение "Mammal".
 - Определяется класс "Dog", который наследует от класса "Mammal". У него есть атрибуты "species", установленный в значение "canine", и "sounds", установленный в значение "wow".
@@ -216,7 +219,7 @@ if __name__ == '__main__':
     print('>> Сайт выключен')
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_9/pic/Lab5.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Lab5.png)
 ### Выводы:
 - Определяется класс "Russian" с использованием декоратора @staticmethod над методом "greeting()". Этот метод выводит строку "Привет" на экран.
 - Определяется класс "English" с использованием декоратора @staticmethod над методом "greeting()". Этот метод выводит строку "Hello" на экран.
@@ -270,7 +273,8 @@ if __name__ == '__main__':
     fibonacci()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_9/pic/Sam1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Sam1_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Sam1_2.png)
 ### Выводы:
 - Определяется класс "Tomato" с созданием статического свойства "states", которое содержит все стадии созревания помидора.
 - Статическое свойство "states" содержит словарь с ключами 'none', 'blossom', 'green', 'red', соответствующими стадиям созревания.
@@ -305,7 +309,7 @@ if __name__ == "__main__":
     read_file("data_file.txt")
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_9/pic/Sam2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Sam2.png)
 ### Выводы:
 - Определен класс "TomatoBush", который представляет куст помидоров.
 - В методе "init" класса "TomatoBush" создается динамическое свойство "tomatoes" - это список объектов класса "Tomato", который создается с помощью генератора списков. Создается список томатов в количестве, указанном в параметре "num_tomatoes". Каждый томат имеет порядковый номер от 1 до "num_tomatoes".
@@ -336,7 +340,7 @@ add_two_and_input_number(89)
 add_two_and_input_number('ovochi')
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_9/pic/Sam3.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Sam3.png)
 ### Выводы:
 - Создан класс "Gardener" для представления садовника.
 - В методе "init" класса "Gardener" определены динамические свойства: "name" (передается параметром и является публичным) и "_plant" (принимает объект класса TomatoBush).
@@ -457,7 +461,7 @@ gardener.harvest() #сбор урожая
 
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_9/pic/Sam4.png)
+![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Sam4.png)
 ### Выводы:
 - Вызов справки по садоводству с помощью статического метода "knowledge_base"
 - Создание объектов tomat и gardener классов TomatoBush и Gardener
@@ -496,7 +500,7 @@ except NegativeNumberError as e:
     print(f"Ошибка: {e}")
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_9/pic/Sam4.png)
+![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_10/pic/Sam5.png)
 ### Выводы:
 - Вызов справки по садоводству с помощью статического метода "knowledge_base"
 - Создание объектов tomat и gardener классов TomatoBush и Gardener
