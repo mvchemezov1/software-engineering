@@ -81,7 +81,7 @@ if __name__ == "__main__":
 ```
 
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_11/pic/Lab1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%98%D1%82%D0%BE%D0%B3%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82/pic/%D0%98%D1%82%D0%BE%D0%B3%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82.png)
 ### Вывод:
 1. Первая строка кода выводит сообщение "Код написал Чемезов Михаил, группа АИС-21-1.". Это авторское сообщение, которое указывает, кто написал данный код.
 2. Определен класс "Game", который является основным компонентом игры.
