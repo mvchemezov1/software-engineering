@@ -30,10 +30,10 @@ class XO:
         print("|{}|{}|{}|".format(self.board[6],self.board[7],self.board[8]))
         print("\n")
 
-    def take_input(self,player_token):
-        # Получение ввода от игрока и размещение его символа на доске
-        while True:
-            player_answer = input("Куда поставим " + player_token+"? ")
+    def take_input(self, player_token):
+        if player_token == "X":
+            while True:
+                player_answer = input("Куда поставим " + player_token + "? ")
             try:
                 player_answer = int(player_answer)
             except:
@@ -47,6 +47,11 @@ class XO:
                     print("Эта клетка уже занята")
             else:
                 print("Некорректный ввод. Введите число от 1 до 9 чтобы поставить "+player_token)
+        else:
+            # Логика для хода компьютера
+            player_answer = random.choice([i for i in range(9) if str(self.board[i]) not in "XO"])
+            print("Компьютер выбрал клетку", player_answer+1)
+            self.board[player_answer] = player_token
 
     def check_win(self):
         # Проверка наличия выигрышной комбинации на доске
