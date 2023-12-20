@@ -16,6 +16,7 @@
 Я реализовал игру "крестики-нолики" на python с помощью полученных знаний на дисциплине "Программная инженерия"
 ### Код
 ```python
+import random
 print("Код написал Чемезов Михаил, группа АИС-21-1.") #справка об авторе
 
 # Определение класса игры "XO"
@@ -32,26 +33,22 @@ class XO:
 
     def take_input(self, player_token):
         if player_token == "X":
-            while True:
-                player_answer = input("Куда поставим " + player_token + "? ")
-            try:
-                player_answer = int(player_answer)
-            except:
-                print("Некорректный ввод. Вы уверены, что ввели число?")
-                continue
+            player_answer = int(input("Куда поставим " + player_token + "? "))
             if player_answer >= 1 and player_answer <= 9:
                 if (str(self.board[player_answer-1]) not in "XO"):
                     self.board[player_answer-1] = player_token
-                    break
                 else:
-                    print("Эта клетка уже занята")
+                    print("Эта клетка уже занята. Выберите другую.")
+                    self.take_input(player_token)
             else:
                 print("Некорректный ввод. Введите число от 1 до 9 чтобы поставить "+player_token)
+                self.take_input(player_token)
         else:
             # Логика для хода компьютера
             player_answer = random.choice([i for i in range(9) if str(self.board[i]) not in "XO"])
             print("Компьютер выбрал клетку", player_answer+1)
             self.board[player_answer] = player_token
+            self.draw_board()
 
     def check_win(self):
         # Проверка наличия выигрышной комбинации на доске
