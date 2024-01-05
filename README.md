@@ -1,5 +1,5 @@
-# Тема 3. Операторы, условия, циклы
-Отчет по Теме #3 выполнил:
+# Тема 4. Функции и модули
+Отчет по Теме #4 выполнил:
 - Чемезов Михаил Владимирович
 - АИС-21-1
 
@@ -26,12 +26,12 @@
 действия и выводит результат в консоль. Вызовите функцию используя “точку входа”.
 ### Код
 ```python
-one = int(input('Введите значение первой переменной: '))
-two = int(input('Введите значение второй переменной: '))
-if one >= two:
-    print('Выполняется')
-else:
-    print('Не выполняется')
+def main():
+    print(3+5)
+
+
+if __name__ == '__main__':
+    main()
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L1_1.png)
@@ -48,13 +48,14 @@ else:
 вызывали функцию. Выведите результат в консоль. Вызовите функцию используя “точку входа”.
 ### Код
 ```python
-one = int(input('Введите значение переменной: '))
-if one < 0:
-    print('Переменная меньше 0')
-elif 0 < one < 10:
-    print('Переменная больше 0 и меньше 10')
-else:
-    print('Переменная больше 10')
+def main():
+    result = 3+9
+    return result
+
+
+if __name__ == '__main__':
+    answer = main()
+    print(answer)
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L2_1.png)
@@ -72,12 +73,14 @@ else:
 На скриншоте ниже приведен пример программы, в которой аргумент функции  “x“превращается в параметр “one”, то же самое происходит с “y” и “two”
 ### Код
 ```python
-numbers = [1, 3, 4, 6, 8, 9]
-value = int(input('Введите значение переменной: '))
-if value in numbers:
-    print('Переменная есть в данном массиве')
-else:
-    print('Переменной нет в этом массиве')
+def main(one, two):
+    result = one + two
+    return result
+
+
+for i in range(5):
+    answer = main(one=1, two=8)
+    print(answer)
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L3_1.png)
@@ -99,15 +102,19 @@ else:
 программирования.
 ### Код
 ```python
-numbers = [1, 3, 4, 6, 8, 9, 15, 16, 73, 321, 322]
-value = int(input('Введите значение переменной: '))
-if value in numbers:
-    if value % 2 == 0:
-        print('Переменная чётная и есть в данном массиве')
-    else:
-        print('Переменная нечётная и есть в данном массиве')
-else:
-    print(f"Переменная нет в массиве numbers и она равна {value}")
+def main(x, *args):
+    one = x #10
+    two = sum(args) # 4, 2, 2, -1, 0, -1, -2, 2
+    three = float(len(args)) #длина кортежа args
+    # пример работы операций над параметрами функции
+    print(f"one={one}\ntwo={two}\nthree={three}")
+
+    return x + sum(args) / float(len(args))
+
+
+if __name__ == '__main__':
+    result = main(10, 4, 2, 2, -1, 0, -1, -2, 2)
+    print(f"\nresult={result}")
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L4_1.png)
@@ -123,18 +130,20 @@ else:
 Комментарии в коде и теоретическая часть помогут вам разобраться в этом нелегком аспекте. Вызовите функцию используя “точку входа”.
 ### Код
 ```python
-for i in range(10):
-    print('i = ', i)
-    if i == 0:
-        i += 2
-    if i == 1:
-        continue
-    if i == 2 or i == 3:
-        print('Переменная равна 2 или 3')
-    elif i in [4, 5, 6]:
-        print('Переменная равна 4, 5 или 6')
-    else:
-        break
+def main(**kwargs):
+    for i in kwargs.items():
+        print(i[0], i[1])
+
+    print()
+
+    for key in kwargs:
+        print(f"{key} = {kwargs[key]}")
+
+
+if __name__ == '__main__':
+    main(x=[1, 2, 3], y=[3,3,0], z=[2,3,0], w=[3,3,0], h=[3,3,0])
+    print()
+    main(**{'x': [1,2,3], 'y': [3,3,0]})
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L5.png)
@@ -152,15 +161,18 @@ for i in range(10):
 первой функции. Вызовите первую функцию используя “точку входа” и минимум 4 аргумента.
 ### Код
 ```Python
-string = 'Привет всем изучающим Python!'
-value = input()
-for i in string:
-    if i == value:
-        index = string.find(value)
-        print(f"Буква '{value}' есть в строке под {index} индексом")
-        break
-else:
-    print(f"Буквы '{value}' нет в указанной строке")
+def main(**kwargs):
+    for i, j in kwargs.items():
+        print(f"{i}. Mean = {mean(j)}")
+
+    print()
+
+def mean(data):
+    return sum(data) / float(len(data))
+
+
+if __name__ == '__main__':
+    main(x=[1, 2, 3], y=[3,3,0])
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L6_1.png)
@@ -174,11 +186,17 @@ else:
 ## Лабораторная работа №7
 - Создайте дополнительный файл .py. Напишите в нем любую функцию, которая будет что угодно выводить в консоль, но не вызывайте ее в нем. Откройте файл main.py, импортируйте в него функцию из нового файла и при помощи “точки входа” вызовите эту функцию.
 ### Код
+- Код в файле for_import.py
 ```Python
-value = 100
-for i in range(10, -1, -1):
-    value -= 1
-    print(i, value)
+def say_hello():
+    print('Hello students!')
+```
+- Основной код
+```Python
+from for_import import say_hello
+
+if __name__ == '__main__':
+    say_hello()
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L7.png)
@@ -192,15 +210,18 @@ for i in range(10, -1, -1):
 - Напишите программу, которая будет выводить корень, синус, косинус полученного от пользователя числа.
 ### Код
 ```Python
-value = 0
-while value < 100:
-    if value == 0:
-         value += 10
-    elif value // 5 > 1:
-        value *= 5
-    else:
-        value -= 5
-    print(value)
+from math import sqrt, sin, cos
+
+
+def main():
+    value = int(input('Введите значение: '))
+    print(sqrt(value))
+    print(sin(value))
+    print(cos(value))
+
+
+if __name__ == '__main__':
+    main()
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L8.png)
@@ -222,14 +243,27 @@ while value < 100:
 - Напишите программу, которая будет рассчитывать какой день недели будет через n-нное количество дней, которые укажет пользователь.
 ### Код
 ```Python
-value = 0
-for i in range(10):
-    for j in range(10):
-        if i != j:
-            value += j
-        else:
-            pass
-print(value)
+from datetime import datetime as dt
+from datetime import timedelta as td
+
+
+
+def main():
+    print(
+        f"Сегодня {dt.today().date()}. "
+        f"День недели - {dt.today().isoweekday()}"
+    )
+    n = int(input('Введите количество дней: '))
+    today = dt.today()
+    result = today + td(days=n)
+    print(
+        f"Через {n} дней будет {result.date()}. "
+        f"День недели - {result.isoweekday()}"
+    )
+
+
+if __name__ == '__main__':
+    main()
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L9.png)
@@ -247,16 +281,31 @@ print(value)
 площадей выполнить при помощи функций. Результатом программы будет число, равное площади, необходимой фигуры.
 ### Код
 ```Python
-even_array = [2, 4, 6, 8, 9]
-flag = False
-for value in even_array:
-    if value % 2 == 1:
-        flag = True
+global result
 
-if flag is True:
-    print('В массиве есть нечётное число')
-else:
-    print('В массиве все числа чётные')
+
+def rectangle():
+    a = float(input("Ширина: "))
+    b = float(input("Высота: "))
+    global result
+    result = a * b
+
+
+def triangle():
+    a = float(input("Основание: "))
+    h = float(input("Высота: "))
+    global result
+    result = 0.5 * a * h
+
+
+figure = input("1-прямоугольник, 2-треугольник: ")
+
+if figure == '1':
+    rectangle()
+elif figure == '2':
+    triangle()
+
+print(f"Площадь: {result}")
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L10_1.png)
