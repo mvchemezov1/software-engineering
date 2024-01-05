@@ -34,8 +34,7 @@ if __name__ == '__main__':
     main()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L1_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L1_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab1.png)
 ### Вывод:
 - Пользователь вводит два значения, которые сохраняются в переменные one и two соответственно.
 - Затем выполняется условие if one >= two, которое сравнивает значения переменных one и two. Если one больше или равно two, то условие считается истинным.
@@ -58,9 +57,7 @@ if __name__ == '__main__':
     print(answer)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L2_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L2_2.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L2_3.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab2.png)
 ### Вывод:
 - Строка one = int(input('Введите значение переменной: ')) предлагает пользователю ввести значение переменной и сохраняет его в переменной one, преобразуя в целое число с помощью функции int().
 - Строка if one < 0: проверяет условие: если значение переменной one меньше нуля, выполняется код внутри блока if. В данном случае, если переменная меньше 0, выводится сообщение "Переменная меньше 0".
@@ -83,8 +80,7 @@ for i in range(5):
     print(answer)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L3_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L3_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab3.png)
 ### Выводы:
 - Создается список numbers с некоторыми числами.
 - Пользователю предлагается ввести значение переменной с помощью вызова input(), и это значение преобразуется в целое число с помощью int().
@@ -117,9 +113,7 @@ if __name__ == '__main__':
     print(f"\nresult={result}")
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L4_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L4_2.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L4_3.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab4.png)
 ### Выводы:
 - Данный код анализирует введенное пользователем значение переменной и проверяет его наличие в списке numbers. Если значение присутствует в списке, то дальше происходит проверка на четность.
 - Если значение является четным (делится на 2 без остатка), то выводится сообщение "Переменная чётная и есть в данном массиве". В противном случае, если значение нечетное, выводится сообщение "Переменная нечётная и есть в данном массиве".
@@ -146,7 +140,7 @@ if __name__ == '__main__':
     main(**{'x': [1,2,3], 'y': [3,3,0]})
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L5.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab5.png)
 ### Выводы:
 - Сначала код печатает текущее значение i.
 - Если i равно 0, к значению i добавляется 2. Однако, эта операция не влияет на весь цикл, так как в Python цикл for не видит изменения счетчика внутри цикла. Это означает, что даже если вы измените значение i внутри цикла, в следующей итерации i все равно будет увеличено на 1 от предыдущего исходного значение, а не от измененного значения.
@@ -175,8 +169,7 @@ if __name__ == '__main__':
     main(x=[1, 2, 3], y=[3,3,0])
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L6_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L6_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab6.png)
 ### Вывод:
 - Этот код Python принимает входные данные от пользователя в форме одного символа (например, буквы), и затем ищет этот символ в заданной строке (в данном случае, строка это "Привет всем изучающим Python!").
 - После того как пользователь вводит значение, код начинает перебирать каждый символ в строке. Если символ, введенный пользователем, совпадает с одним из символов в строке, код находит и выводит индекс этого символа. Индекс - это позиция символа в строке (отсчет начинается с нуля). Поиск прекращается после первого совпадения.
@@ -199,7 +192,7 @@ if __name__ == '__main__':
     say_hello()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L7.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab7.png)
 ### Выводы:
 - Задает начальное значение переменной value равное 100.
 - Выполняет цикл, который итерируется по диапазону начиная с 10 и идет в обратном порядке до 0 (включая его) с шагом -1. Это значит, что переменная цикла i принимает значения от 10 до 0 последовательно в обратном порядке.
@@ -224,7 +217,7 @@ if __name__ == '__main__':
     main()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L8.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab8.png)
 ### Выводы:
 - value = 0 вводит переменную value и задает ей начальное значение 0.
 - while value < 100: устанавливает цикл, который будет выполняться до тех пор, пока value остается меньше 100.
@@ -266,7 +259,7 @@ if __name__ == '__main__':
     main()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L9.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab9.png)
 ### Выводы:
 - Данный код на языке Python выполняет двойной цикл, где каждый цикл итерируется через диапазон чисел от 0 до 9 (10 чисел всего).
 - Вложенные циклы перебирают все возможные пары (i, j), где i и j изменяются от 0 до 9. Если i не равно j, то j добавляется к переменной value. Если i равно j (что равносильно паре чисел вида (0,0), (1,1), (2,2), и так далее до (9,9)), то цикл продолжает свое выполнение, не увеличивая value.
@@ -308,7 +301,10 @@ elif figure == '2':
 print(f"Площадь: {result}")
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/L10_1.png)
+- площадь прямоугольника:
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab10_1.png)
+- площадь треугольника:
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab10_2.png)
 ### Выводы:
 - определена переменная even_array, которая представляет из себя список чисел: 2, 4, 6, 8 и 9.
 - flag объявлена как False. Этот флаг будет использоваться для отслеживания, есть ли в массиве нечетное число.
