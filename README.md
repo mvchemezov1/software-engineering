@@ -36,7 +36,7 @@ if __name__ == '__main__':
     main()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab1.png)
 ### Вывод:
 - Этот код определяет функцию main(), которая выводит на экран сумму 3 и 5 (8).
 - Блок if name == 'main': проверяет, является ли текущий файл основным (main) файлом программы. Если это так, то выполняется вызов функции main().
@@ -58,7 +58,7 @@ if __name__ == '__main__':
     print(answer)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab2.png)
 ### Вывод:
 - Этот код определяет функцию main(), которая выполняет вычисление суммы 3 и 9 (12) и возвращает этот результат.
 - Блок if name == 'main': проверяет, является ли текущий файл основным (main) файлом программы. Если это так, то выполняется вызов функции main() и сохранение результата в переменной answer.
@@ -83,7 +83,7 @@ for i in range(5):
     print(answer)
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab3.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab3.png)
 ### Выводы:
 - Этот код определяет функцию main(), которая принимает два аргумента (one и two) и выполняет вычисление суммы этих аргументов. Функция возвращает этот результат.
 - Блок for i in range(5): выполняет цикл 5 раз. В каждой итерации цикла переменная i принимает значение от 0 до 4.
@@ -112,7 +112,7 @@ if __name__ == '__main__':
     print(f"\nresult={result}")
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab4.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab4.png)
 ### Выводы:
 - Этот код определяет функцию main(), которая принимает два обязательных аргумента (x и *args) и выполняет несколько операций над параметрами функции.
 - Аргумент x сохраняется в переменную one, а сумма всех элементов кортежа args сохраняется в переменную two.
@@ -145,7 +145,7 @@ if __name__ == '__main__':
     main(**{'x': [1,2,3], 'y': [3,3,0]})
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab5.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab5.png)
 ### Выводы:
 - Этот код определяет функцию main(), которая принимает параметры в виде словаря kwargs.
 - Внутри функции, с помощью цикла for i in kwargs.items(): происходит итерация по паре ключ-значение (i[0] и i[1]) в словаре kwargs. В каждом шаге цикла выводится ключ и значение на отдельных строках.
@@ -172,7 +172,7 @@ if __name__ == '__main__':
     main(x=[1, 2, 3], y=[3,3,0])
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab6.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab6.png)
 ### Вывод:
 - Этот код определяет две функции: main() и mean(). Функция main() принимает параметры в виде словаря kwargs, а функция mean() вычисляет среднее значение списка данных.
 - Внутри функции main(), с помощью цикла for i, j in kwargs.items(): происходит итерация по паре ключ-значение (i и j) в словаре kwargs. В каждом шаге цикла выводится ключ и значение на отдельных строках, а также вычисляется среднее значение списка данных с помощью функции mean().
@@ -197,7 +197,7 @@ if __name__ == '__main__':
     say_hello()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab7.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab7.png)
 ### Выводы:
 - В файле for_import.py определена функция say_hello(), которая выводит на экран строку "Hello students!".
 - В основном коде выполняется импорт функции say_hello() из файла for_import.py.
@@ -222,7 +222,7 @@ if __name__ == '__main__':
     main()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab8.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab8.png)
 ### Выводы:
 - В коде выполняется импорт функций sqrt(), sin() и cos() из модуля math.
 - Функция main() принимает ввод от пользователя (значение числа), использует функции из модуля math и выводит результаты на экран.
@@ -261,7 +261,7 @@ if __name__ == '__main__':
     main()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab9.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab9.png)
 ### Выводы:
 - В коде выполняется импорт классов datetime и timedelta из модуля datetime.
 - Функция main() выводит на экран текущую дату и номер текущего дня недели.
@@ -301,10 +301,7 @@ elif figure == '2':
 print(f"Площадь: {result}")
 ```
 ### Результат
-- площадь прямоугольника:
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab10_1.png)
-- площадь треугольника:
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/Lab10_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab10.png)
 ### Выводы:
 - В коде объявляется глобальная переменная result, которая будет использоваться для хранения результата.
 - Функция rectangle() запрашивает у пользователя ввод ширины и высоты прямоугольника, вычисляет его площадь и сохраняет ее в глобальную переменную result.
