@@ -28,12 +28,17 @@
 P.S. Посмотрите что происходит с повторяющимися значениями в множествах, это достаточно интересно.
 ### Код
 ```python
-def main():
-    print(3+5)
+set_1 = {'White', 'Black', 'Red', 'Pink'}
+set_2 = {'Red', 'Green', 'Blue', 'Red'}
+print('1', set_1 - set_2)
 
+set_1 = {'White', 'Black', 'Red', 'Pink', 'Black', 'White'}
+set_2 = {'Red', 'Green', 'Blue', 'Red'}
+print('2', set_1 - set_2)
 
-if __name__ == '__main__':
-    main()
+set_1 = {'White', 'Black', 'Red', 'Pink', 'Red', 'Red'}
+set_2 = {'Red', 'Green', 'Blue', 'Red', 'Red', 'Red' }
+print('3', set_1 - set_2)
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab1.png)
@@ -48,14 +53,17 @@ if __name__ == '__main__':
 добавить несколько элементов, например, через цикл.
 ### Код
 ```python
-def main():
-    result = 3+9
-    return result
+a = set('abcdefg')
+print(a)
+for i in range(1, 5):
+    a.add(i)
+print(a)
 
-
-if __name__ == '__main__':
-    answer = main()
-    print(answer)
+a = frozenset('abcdefg')
+print(a)
+for i in range(1, 5):
+    a.add(i)
+print(a)
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab2.png)
@@ -73,14 +81,15 @@ P.S. В Python есть прикольное свойство, благодар�
 интересно можете самостоятельно найти это решение.
 ### Код
 ```python
-def main(one, two):
-    result = one + two
-    return result
+def replace(input_list):
+    memory = input_list[0]
+    input_list[0] = input_list[-1]
+    input_list[-1] = memory
+
+    return input_list
 
 
-for i in range(5):
-    answer = main(one=1, two=8)
-    print(answer)
+print(replace([1, 2, 3, 4, 5]))
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab3.png)
@@ -97,19 +106,8 @@ for i in range(5):
 индексами от 2 до 6. В программе необходимо использовать “срез”.
 ### Код
 ```python
-def main(x, *args):
-    one = x #10
-    two = sum(args) # 4, 2, 2, -1, 0, -1, -2, 2
-    three = float(len(args)) #длина кортежа args
-    # пример работы операций над параметрами функции
-    print(f"one={one}\ntwo={two}\nthree={three}")
-
-    return x + sum(args) / float(len(args))
-
-
-if __name__ == '__main__':
-    result = main(10, 4, 2, 2, -1, 0, -1, -2, 2)
-    print(f"\nresult={result}")
+a = [12, 54, 32, 57, 843, 2346, 765, 75, 25, 234, 756, 23]
+print(a[2:6])
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab4.png)
@@ -129,20 +127,13 @@ if __name__ == '__main__':
 списка. Студент пока не придумал, где может пригодиться подобное значение, но ищет у вас помощи в реализации такой функции useless().
 ### Код
 ```python
-def main(**kwargs):
-    for i in kwargs.items():
-        print(i[0], i[1])
-
-    print()
-
-    for key in kwargs:
-        print(f"{key} = {kwargs[key]}")
+def useless(lst):
+    return max(lst) / len(lst)
 
 
-if __name__ == '__main__':
-    main(x=[1, 2, 3], y=[3,3,0], z=[2,3,0], w=[3,3,0], h=[3,3,0])
-    print()
-    main(**{'x': [1,2,3], 'y': [3,3,0]})
+print(useless([3, 5, 7, 3, 33]))
+print(useless([-12.5, 54, 77.3, 0, -36, 98.2, -63, 21.7, 47, -89.6]))
+print(useless([-25.8, 86, 12.5, -56, 73.2, 0, 43, -91.5, 65.9, -7]))
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab5.png)
@@ -159,17 +150,14 @@ if __name__ == '__main__':
 ### Код
 ```Python
 def main(**kwargs):
-    for i, j in kwargs.items():
-        print(f"{i}. Mean = {mean(j)}")
+superheroes = ['superman', 'spiderman', 'batman']
 
-    print()
+nikolay, vasiliy, ivan = superheroes
 
-def mean(data):
-    return sum(data) / float(len(data))
+print('Николай - ', nikolay)
+print('Василий - ', vasiliy)
+print('Иван - ', ivan)
 
-
-if __name__ == '__main__':
-    main(x=[1, 2, 3], y=[3,3,0])
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab6.png)
@@ -184,17 +172,12 @@ if __name__ == '__main__':
 программу, которая также будет находить самое слабое звено 
 (минимальный элемент) и удалять его, только делать он это хочет не с людьми, а со списком. Помогите Вовочке с реализацией программы. Подсказка: для этого вам необходимо отсортировать список и удалить значение при помощи pop().
 ### Код
-- Код в файле for_import.py
 ```Python
-def say_hello():
-    print('Hello students!')
-```
-- Основной код
-```Python
-from for_import import say_hello
-
-if __name__ == '__main__':
-    say_hello()
+a = [-25.8, 86, 12.5, -56, 73.2, 0, 43, -91.5, 65.9, -7]
+a.sort()
+print('Отсортированный список:\n', a)
+a.pop(0)
+print('Отсортированный список без наименьшего элемента:\n', a)
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab7.png)
@@ -208,18 +191,18 @@ if __name__ == '__main__':
 случайным образом создал несколько списков, состоящих минимум из 3, а максимум из 10 элементов и поместил их в один большой список. Он также как и Иван не знает зачем ему это сейчас нужно, но надеется на то, что это пригодится ему в будущем.
 ### Код
 ```Python
-from math import sqrt, sin, cos
+from random import randint
 
-
-def main():
-    value = int(input('Введите значение: '))
-    print(sqrt(value))
-    print(sin(value))
-    print(cos(value))
-
+def list_maker():
+    a = [randint(1, 100)] * randint(3, 10)
+    return a
 
 if __name__ == '__main__':
-    main()
+    result = []
+    for i in range(randint(1, 5)):
+        result.append(list_maker())
+
+    print(result)
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab8.png)
@@ -238,27 +221,22 @@ if __name__ == '__main__':
 3 – «Множества равны»
 ### Код
 ```Python
-from datetime import datetime as dt
-from datetime import timedelta as td
-
-
-
-def main():
-    print(
-        f"Сегодня {dt.today().date()}. "
-        f"День недели - {dt.today().isoweekday()}"
-    )
-    n = int(input('Введите количество дней: '))
-    today = dt.today()
-    result = today + td(days=n)
-    print(
-        f"Через {n} дней будет {result.date()}. "
-        f"День недели - {result.isoweekday()}"
-    )
+def  superset(set_1, set_2):
+    if set_1 > set_2:
+        print(f'Объект {set_1} явлется чистым супермножеством')
+    elif set_1 == set_2:
+        print('Множества равны')
+    elif set_1 < set_2:
+        print(f'Объект {set_2} явлется чистым супермножеством')
+    elif set_1 > set_2:
+        print('Супермножество не мобнаружено')
 
 
 if __name__ == '__main__':
-    main()
+    superset({1, 8, 3, 5}, {3, 5})
+    superset({1, 8, 3, 5}, {5, 3, 8, 1})
+    superset({3, 5}, {5, 3, 8, 1})
+    superset({90, 100}, {3, 5})
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab9.png)
@@ -274,31 +252,8 @@ if __name__ == '__main__':
 занимать не более двух строк в редакторе кода.
 ### Код
 ```Python
-global result
-
-
-def rectangle():
-    a = float(input("Ширина: "))
-    b = float(input("Высота: "))
-    global result
-    result = a * b
-
-
-def triangle():
-    a = float(input("Основание: "))
-    h = float(input("Высота: "))
-    global result
-    result = 0.5 * a * h
-
-
-figure = input("1-прямоугольник, 2-треугольник: ")
-
-if figure == '1':
-    rectangle()
-elif figure == '2':
-    triangle()
-
-print(f"Площадь: {result}")
+my_list = [2,5, 8, 3]
+print(my_list[::-1])
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_5/pic/Lab10.png)
