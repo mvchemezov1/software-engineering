@@ -359,7 +359,7 @@ if __name__ == '__main__':
     print(f"Время выполнения программы - {time_costs}")
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam1.png)
 ### Выводы:
 - Код использует библиотеки datetime и math.
 - Код определяет функцию main(), которая принимает пять именованных аргументов, представляющих собой координаты точек в двумерном пространстве.
@@ -401,7 +401,9 @@ if __name__ == "__main__":
     roll_die()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam2_1.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam2_2.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam2_3.png)
 ### Выводы:
 - Код использует библиотеку random.
 - Код определяет функцию roll_die(), которая принимает произвольное количество аргументов.
@@ -439,10 +441,7 @@ if __name__ == "__main__":
     main()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I3_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I3_2.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I3_3.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I3_4.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam3.png)
 ### Выводы:
 - Код использует модули datetime и time.
 - Код определяет функцию main(), которая принимает произвольное количество аргументов.
@@ -472,9 +471,7 @@ if __name__ == "__main__":
     print(mean(10, 20, 30, 40, 50))
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I4_1.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I4_2.png)
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I4_3.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam4.png)
 ### Выводы:
 - Код определяет функцию mean(), которая принимает произвольное количество аргументов.
 - Функция mean() использует функцию sum() для подсчета суммы аргументов.
@@ -542,7 +539,7 @@ if __name__ == "__main__":
     main()
 ```
 ### Результат
-- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_3/pic/I5.png)
+- ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam5.png)
 ### Выводы:
 
 - Файл calculation.py:
