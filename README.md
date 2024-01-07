@@ -365,21 +365,27 @@ print(f"Все результаты начиная с 10: {times_from_10}")
 - three = [4, 21, 37, 56, 84]
 ### Код
 ```python
-def triangle_area(base, height):
-    return 0.5 * base * height
-
+from math import sqrt
 one = [12, 25, 3, 48, 71]
 two = [5, 18, 40, 62, 98]
 three = [4, 21, 37, 56, 84]
 
-max_side = max_element(one, two, three)
-min_side = min_element(one, two, three)
+# Get the max and min values from each list
+max_one = max(one)
+max_two = max(two)
+max_three = max(three)
+p2 = (max_one + max_two + max_three) * 0.5
+area_two = sqrt(p2*(p2 - max_one)*(p2 - max_two)*(p2 - max_three))
 
-area_max_triangle = triangle_area(min_side, max_side)
-area_min_triangle = triangle_area(max_side, min_side)
+min_one = min(one)
+min_two = min(two)
+min_three = min(three)
+p1 = (min_one + min_two + min_three) * 0.5
+area_one = sqrt(p1*(p1 - min_one)*(p1 - min_two)*(p1 - min_three))
 
-print(f"Площадь треугольника с максимальными сторонами: {area_max_triangle}")
-print(f"Площадь треугольника с минимальными сторонами: {area_min_triangle}")
+# Print the results
+print(f"Площадь треугольника с максимальными сторонами: {area_two}")
+print(f"Площадь треугольника с минимальными сторонами: {area_one}")
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam3.png)
@@ -447,21 +453,23 @@ print("Обновленный массив 3:", modified_grades3)
 - {'11', 1, 3, 2, 5, 6, '222222', '222', 7, '2222', '22222', '22'}
 ### Код
 ```python
-def create_sets(list1, list2, list3):
-    set1 = {str(x * x) + x if x * x + x in s else x for x in set(list1)}
-    set2 = {str(x * x) + x if x * x + x in s else x for x in set(list2)}
-    set3 = {str(x * x) + x if x * x + x in s else x for x in set(list3)}
-    return set1, set2, set3
+list_1 = [1, 1, 3, 3, 1]
+list_2 = [5, 5, 5, 5, 5, 5, 5]
+list_3 = [2, 2, 1, 2, 2, 5, 6, 7, 1, 3, 2, 2]
 
-list1 = [1, 1, 3, 3, 1]
-list2 = [5, 5, 5, 5, 5, 5, 5]
-list3 = [2, 2, 1, 2, 2, 5, 6, 7, 1, 3, 2, 2]
+def transform(lst):
+    result = set()
+    for num in lst:
+        count = lst.count(num)
+        if count == 1:
+            result.add(num)
+        else:
+            result.add(str(num)*count)
+    return result
 
-set1, set2, set3 = create_sets(list1, list2, list3)
-
-print("Множество 1:", set1)
-print("Множество 2:", set2)
-print("Множество 3:", set3)
+print(transform(list_1))
+print(transform(list_2))
+print(transform(list_3))
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam5.png)
