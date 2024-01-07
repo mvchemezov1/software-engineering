@@ -283,44 +283,30 @@ sql
 консоль, в котором будет указана вся необходимая информация.
 ### Код
 ```python
-# Импортирует библиотеку datetime для работы с датами и временем.
-from datetime import datetime
+def count_checks(checks):
+    return len(checks)
 
-# Импортирует функцию sqrt() из библиотеки math для вычисления квадратного корня.
-from math import sqrt
+def count_unique_visitors(checks):
+    unique_visitors = set()
+    for check in checks:
+        unique_visitors.add(check % 10000)
+    return len(unique_visitors)
 
-# Определяет функцию main(), которая принимает произвольное количество именованных аргументов.
-def main(**kwargs):
+def most_visited_employee(checks):
+    employee_counts = {}
+    for check in checks:
+        employee_counts[check] = employee_counts.get(check, 0) + 1
+    return max(employee_counts, key=employee_counts.get)
 
-    # Итерация по словарю kwargs, используя цикл for.
-    for key in kwargs.items():
+checks = [8734, 2345, 8201, 6621, 9999, 1234, 5678, 8201, 8888, 4321, 3365, 1478, 9865, 5555, 7777, 9998, 1111, 2222, 3333, 4444, 5556, 6666, 5410, 7778, 8889, 4445, 1439, 9604, 8201, 3365, 7502, 3016, 4928, 5837, 8201, 2643, 5017, 9682, 8530, 3250, 7193, 9051, 4506, 1987, 3365, 5410, 7168, 7777, 9865, 5678, 8201, 4445, 3016, 4506, 4506]
 
-        # Вычисляет квадратный корень из суммы квадратов координат точки.
-        result = sqrt(key[1][0] ** 2 + key[1][1] ** 2)
+check_count = count_checks(checks)
+unique_visitor_count = count_unique_visitors(checks)
+most_visited = most_visited_employee(checks)
 
-        # Выводит результат вычисления.
-        print(result)
-
-# Определяет точку входа в программу.
-if __name__ == '__main__':
-
-    # Сохраняет текущее время в переменную start_time.
-    start_time = datetime.now()
-
-    # Вызывает функцию main() с пятью аргументами.
-    main(
-        one = [10, 3],
-        two = [5, 4],
-        three = [15, 13],
-        four = [93, 53],
-        five = [133, 15]
-    )
-
-    # Вычисляет время выполнения программы, вычитая текущее время из start_time.
-    time_costs = datetime.now() - start_time
-
-    # Выводит время выполнения программы.
-    print(f"Время выполнения программы - {time_costs}")
+print(f"Количество выданных чеков: {check_count}")
+print(f"Количество разных людей, посетивших ресторан: {unique_visitor_count}")
+print(f"Сотрудник, посетивший ресторан больше всех раз: {most_visited}")
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam1.png)
@@ -343,33 +329,24 @@ if __name__ == '__main__':
 консоль, в котором будет указана вся необходимая информация.
 ### Код
 ```python
-import random
+def get_best_times(times, n):
+    return sorted(times)[:n]
 
-def roll_die():
-    # Получаем случайное значение от 1 до 6
-    value = random.randint(1, 6)
+def get_worst_times(times, n):
+    return sorted(times, reverse=True)[:n]
 
-    # Выводим значение в консоль
-    print(f"Значение кубика: {value}")
+def get_times_from(times, value):
+    return [time for time in times if time >= value]
 
-    # Если значение равно 5 или 6, то выигрываем
-    if value == 5 or value == 6:
-        print("Вы победили!")
-        return
+times = [10.2, 14.8, 19.3, 22.7, 12.5, 33.1, 38.9, 21.6, 26.4, 17.1, 30.2, 35.7, 16.9, 27.8, 24.5, 16.3, 18.7, 31.9, 12.9, 37.4]
 
-    # Если значение равно 3 или 4, то рекурсивно вызываем функцию
-    if value == 3 or value == 4:
-        roll_die()
+best_times = get_best_times(times, 3)
+worst_times = get_worst_times(times, 3)
+times_from_10 = get_times_from(times, 10)
 
-    # Если значение равно 1 или 2, то проигрываем
-    else:
-        print("Вы проиграли!")
-        return
-
-
-if __name__ == "__main__":
-    # Вызываем функцию
-    roll_die()
+print(f"Три лучших результата: {best_times}")
+print(f"Три худших результата: {worst_times}")
+print(f"Все результаты начиная с 10: {times_from_10}")
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam2_1.png)
@@ -393,26 +370,21 @@ two = [5, 18, 40, 62, 98]
 three = [4, 21, 37, 56, 84]
 ### Код
 ```python
-import datetime
-import time
+def triangle_area(base, height):
+    return 0.5 * base * height
 
+one = [12, 25, 3, 48, 71]
+two = [5, 18, 40, 62, 98]
+three = [4, 21, 37, 56, 84]
 
-def main():
-    # Получаем текущее время
-    now = datetime.datetime.now()
+max_side = max_element(one, two, three)
+min_side = min_element(one, two, three)
 
-    # Цикл for, который будет повторяться 5 раз
-    for i in range(5):
-        # Выводим текущее время
-        print(now)
+area_max_triangle = triangle_area(min_side, max_side)
+area_min_triangle = triangle_area(max_side, min_side)
 
-        # "Усыпляем" программу на 1 секунду
-        time.sleep(1)
-
-
-if __name__ == "__main__":
-    # Вызываем функцию
-    main()
+print(f"Площадь треугольника с максимальными сторонами: {area_max_triangle}")
+print(f"Площадь треугольника с минимальными сторонами: {area_min_triangle}")
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam3.png)
@@ -434,21 +406,28 @@ if __name__ == "__main__":
 консоль, в котором будут три обновленных массива.
 ### Код
 ```python
-def mean(*args):
-    # Подсчитываем сумму аргументов
-    total = sum(args)
+def modify_grades(grades):
+    modified_grades = []
+    for grade in grades:
+        if grade == 2:
+            modified_grades.append(4)
+        elif grade == 3:
+            modified_grades.append(4)
+        else:
+            modified_grades.append(grade)
+    return modified_grades
 
-    # Подсчитываем количество аргументов
-    count = len(args)
+grades1 = [2, 3, 4, 5, 3, 4, 5, 2, 2, 5, 3, 4, 3, 5, 4]
+grades2 = [4, 2, 3, 5, 3, 5, 4, 2, 2, 5, 4, 3, 5, 3, 4]
+grades3 = [5, 4, 3, 3, 4, 3, 3, 5, 5, 3, 3, 3, 3, 4, 4]
 
-    # Возвращаем среднее арифметическое
-    return total / count
+modified_grades1 = modify_grades(grades1)
+modified_grades2 = modify_grades(grades2)
+modified_grades3 = modify_grades(grades3)
 
-
-if __name__ == "__main__":
-    # Вызываем функцию с произвольным количеством аргументов
-    print(mean(1, 2, 3, 4, 5))
-    print(mean(10, 20, 30, 40, 50))
+print("Обновленный массив 1:", modified_grades1)
+print("Обновленный массив 2:", modified_grades2)
+print("Обновленный массив 3:", modified_grades3)
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam4.png)
@@ -470,61 +449,22 @@ list_3 = [2, 2, 1, 2, 2, 5, 6, 7, 1, 3, 2, 2]
 {'11', 1, 3, '33', '111'}
 {5, '5555', '555555', '55555', '555', '55', '5555555'} {'11', 1, 3, 2, 5, 6, '222222', '222', 7, '2222', '22222', '22'}
 ### Код
-- Файл calculation.py:
 ```python
-import math
+def create_sets(list1, list2, list3):
+    set1 = {str(x * x) + x if x * x + x in s else x for x in set(list1)}
+    set2 = {str(x * x) + x if x * x + x in s else x for x in set(list2)}
+    set3 = {str(x * x) + x if x * x + x in s else x for x in set(list3)}
+    return set1, set2, set3
 
+list1 = [1, 1, 3, 3, 1]
+list2 = [5, 5, 5, 5, 5, 5, 5]
+list3 = [2, 2, 1, 2, 2, 5, 6, 7, 1, 3, 2, 2]
 
-def heron(a, b, c):
-    """
-    Вычисляет площадь треугольника по формуле Герона.
+set1, set2, set3 = create_sets(list1, list2, list3)
 
-    Args:
-        a: Длина стороны a треугольника.
-        b: Длина стороны b треугольника.
-        c: Длина стороны c треугольника.
-
-    Returns:
-        Площадь треугольника.
-    """
-
-    s = (a + b + c) / 2
-    return math.sqrt(s * (s - a) * (s - b) * (s - c))
-
-
-if __name__ == "__main__":
-    # Получаем длины сторон треугольника от пользователя
-    a = float(input("Введите длину стороны a треугольника: "))
-    b = float(input("Введите длину стороны b треугольника: "))
-    c = float(input("Введите длину стороны c треугольника: "))
-
-    # Вычисляем площадь треугольника
-    area = heron(a, b, c)
-
-    # Выводим площадь треугольника в консоль
-    print("Площадь треугольника равна:", area)
-```
-
-- Файл interaction.py:
-```python
-from calculation import heron
-
-
-def main():
-    # Получаем длины сторон треугольника от пользователя
-    a = float(input("Введите длину стороны a треугольника: "))
-    b = float(input("Введите длину стороны b треугольника: "))
-    c = float(input("Введите длину стороны c треугольника: "))
-
-    # Вычисляем площадь треугольника
-    area = heron(a, b, c)
-
-    # Выводим площадь треугольника в консоль
-    print("Площадь треугольника равна:", area)
-
-
-if __name__ == "__main__":
-    main()
+print("Множество 1:", set1)
+print("Множество 2:", set2)
+print("Множество 3:", set3)
 ```
 ### Результат
 - ![Результат](https://github.com/mvchemezov1/software-engineering/blob/%D0%A2%D0%B5%D0%BC%D0%B0_4/pic/sam5.png)
